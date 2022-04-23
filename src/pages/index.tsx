@@ -8,12 +8,16 @@ import type { NextPage } from "next";
 // Images
 
 // Components
+import { Hero } from "../components/Hero";
 
 const Home: NextPage = () => {
   return (
-    <Head>
-      <title>Título da página</title>
-    </Head>
+    <>
+      <Head>
+        <title>Título da página</title>
+      </Head>
+      <Hero />
+    </>
   );
 };
 
