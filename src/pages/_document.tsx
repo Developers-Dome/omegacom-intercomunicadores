@@ -40,6 +40,9 @@ class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,700,900,italic,700italic,900italic" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:regular,italic,700,700italic,900,900italic" rel="stylesheet" />
+
           <meta name="description" content="ESCREVER DEPOIS" />
           <meta name="author" content="developers-dome" />
 
