@@ -1,13 +1,28 @@
-# Template 
+# OmegaCom - Intercomunicadores
 
-Template para projetos Next.js utilizando Typescript
+Em construção
 
---- 
+## Colaboradores
 
-### Versões:
+Ás seguintes pessoas contribuíram para este projeto:
 
-- React **v17.0.2**
-- Next **v12.0.8**
-- TypeScript **v4.5.4**
-- Styled components **v5.3.3**
-- Eslint **v8.7.0**
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/EduardooPV">
+        <img src="https://github.com/EduardooPV.png" width="100px;" alt="Foto do Luiz Eduardo no GitHub"/><br>
+        <sub>
+          <b>Luiz Eduardo</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Tonashiro">
+        <img src="https://github.com/Tonashiro.png" width="100px;" alt="Foto do Tonashiro no Github"/><br>
+        <sub>
+          <b>Tonashiro</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
