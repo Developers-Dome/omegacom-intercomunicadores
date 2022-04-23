@@ -4,7 +4,7 @@ Em construção
 
 ## Colaboradores
 
-Ás seguintes pessoas contribuíram para este projeto:
+As seguintes pessoas contribuíram para este projeto:
 
 <table>
   <tr>
