@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "useUnknownInCatchVariables": false,
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -17,9 +18,19 @@
     "baseUrl": "./",
     "paths": {
       "@styles/*": ["src/styles/*"],
-      "@components/*": ["src/components/*"]
-    }
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@api": ["src/api/api.jsx"],
+      "@context/*": ["src/context/*"]
+    },
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/index.js",
+    "src/pages/_document.jsx"
+  ],
   "exclude": ["node_modules"]
 }

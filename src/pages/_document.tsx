@@ -40,9 +40,10 @@ class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          
-          <meta name="description" content="Descrição projeto" />
-          <meta name="author" content="Criador" />
+          <meta name="description" content="ESCREVER DEPOIS" />
+          <meta name="author" content="developers-dome" />
+
+          <link rel="shortcut icon" href="/favicone.png" />
         </Head>
         <body>
           <Main />
