@@ -10,5 +10,6 @@
   "secondary200": "#808D83",
   "secondary300": "#616C64",
   "secondary400": "#484F4A",
-  "secondary500": "#282E29"
+  "secondary500": "#282E29",
+  "neutral500": "#363434"
 }
