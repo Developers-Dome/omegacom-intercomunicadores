@@ -24,6 +24,7 @@ time, mark, audio, video {
   text-decoration: none;
   box-sizing: border-box;
 	font: inherit;
+  font-family: 'Montserrat', sans-serif;
   color: inherit;
 }
 article, aside, details, figcaption, figure,
