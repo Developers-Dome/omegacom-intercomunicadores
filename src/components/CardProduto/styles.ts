@@ -3,7 +3,7 @@ import f from "@styles/typograph.json";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 320px;
+  width: 320px;
 
   padding: 20px;
 
