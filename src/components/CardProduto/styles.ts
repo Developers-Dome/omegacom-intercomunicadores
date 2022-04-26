@@ -3,8 +3,7 @@ import f from "@styles/typograph.json";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 320px;
-
+  width: 320px;
   padding: 20px;
 
   display: flex;
@@ -30,6 +29,13 @@ export const Container = styled.div`
     display: block;
     position: relative;
 
+    &:hover {
+      img {
+        transition: all 0.2s;
+        transform: scale(1.1);
+      }
+    }
+
     &::after {
       content: "";
       display: block;
@@ -53,7 +59,7 @@ export const Container = styled.div`
         transform: translateX(0px);
       }
       50% {
-        transform: translateX(20px);
+        transform: translateX(15px);
       }
       100% {
         transform: translateX(0px);
