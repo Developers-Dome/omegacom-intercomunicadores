@@ -9,7 +9,12 @@ interface LinkProps {
   icon?: ReactNode;
 }
 
-export function LinkItem({ children, href, transparent, icon }: LinkProps) {
+export default function LinkItem({
+  children,
+  href,
+  transparent,
+  icon,
+}: LinkProps) {
   return (
     <>
       <Link href={href} passHref>
