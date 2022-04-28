@@ -2,7 +2,7 @@ import styled, {keyframes} from "styled-components"
 import c from "../../styles/colors.json"
 import t from "../../styles/typograph.json"
 
-export const Container = styled.header`
+export const Container = styled.nav`
   @media (min-width: 1024px) {
     position: fixed;
     display: flex;
@@ -17,23 +17,6 @@ export const Container = styled.header`
     z-index: 6;
 
     transition: all .5s;
-    &.background {
-      background: transparent;
-      box-shadow: none;
-
-      span {
-        color: white;
-
-        &:hover {
-          color: ${c.primary500};
-        }
-      }
-
-      a:last-child {
-        border: 1px solid white;
-        color: white;
-      }
-    }
   }
 `;
 
@@ -214,17 +197,6 @@ const slide = keyframes`
   }
 `;
 
-const slideOut = keyframes`
-  0% {
-    top: 5%;
-    opacity: 1;
-  }
-  100% {
-    top: -100%;
-    opacity: 0;
-  }
-`;
-
 export const Menu = styled.div`
   position: fixed;
   display: none;
@@ -260,8 +232,6 @@ export const Menu = styled.div`
     min-height: 100%;
   }
 
-
-  animation: ${slideOut} 0.5s linear;
   background: white;
 
   @media (orientation: landscape) {
@@ -302,11 +272,12 @@ export const IconContainer = styled.div`
 
   width: 100%;
   height: 80px;
+  padding: 0 5%;
   background: white;
   z-index: 5;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
 
   img {
-    margin: 6px 0 6px 5%;
+    margin: 6px 0;
   }
 `;

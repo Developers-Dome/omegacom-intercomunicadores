@@ -73,7 +73,6 @@ export default function Navbar() {
     setActive(!active);
   };
 
-  console.log(prop);
   return (
     <Container>
       {width > 1023 ? (
@@ -125,7 +124,6 @@ export default function Navbar() {
                   </>
                 );
               })}
-
               <Button href={prop.button.link} icon={<BsWhatsapp />}>
                 {prop.button.text}
               </Button>
