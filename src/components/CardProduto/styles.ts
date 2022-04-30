@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 320px;
-  padding: 20px;
 
   display: flex;
   flex-direction: column;
@@ -13,7 +12,7 @@ export const Container = styled.div`
   gap: 1.25rem;
 
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
+  border-radius: 10px;
 
   p {
     font-size: ${f.h4.fontSize};
@@ -42,10 +41,12 @@ export const Container = styled.div`
       position: absolute;
 
       bottom: 0;
+      right: 15px;
 
-      width: 100%;
+      width: 90%;
       height: 3px;
 
+      border-radius: 50%;
       background: ${c.primary300};
     }
   }

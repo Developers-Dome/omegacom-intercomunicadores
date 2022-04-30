@@ -2,15 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 60px 5% 0;
   margin: auto;
+
+  @media (min-width: 1024px) {
+    padding: 100px 5% 0;
+  }
 `;
 
 export const GridCards = styled.div`
   margin: 60px auto 60px auto;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   grid-column-gap: 22px;
   grid-row-gap: 22px;
   flex-wrap: wrap;
@@ -49,11 +53,12 @@ export const Embla = styled.div`
 
 export const EmblaContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   column-gap: 20px;
 `;
+
 export const EmblaSlide = styled.div`
   position: relative;
-  flex: 1 1 100%;
   margin-top: 5px;
   margin-bottom: 5px;
 `;

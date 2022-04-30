@@ -2,20 +2,24 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 60px 5% 0;
   margin: auto;
+
+  @media (min-width: 1024px) {
+    padding: 100px 5% 0;
+  }
 `;
 
 export const GridCards = styled.div`
-  margin: 60px auto 60px auto;
+  margin: 60px auto 0;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   grid-column-gap: 22px;
   grid-row-gap: 22px;
   flex-wrap: wrap;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
@@ -46,7 +50,7 @@ export const Embla = styled.div`
 
   overflow: hidden;
 
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;
@@ -61,3 +65,16 @@ export const EmblaSlide = styled.div`
   margin-top: 5px;
   margin-bottom: 5px;
 `;
+
+export const Button = styled.div`
+  width: 100%;
+
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 1024px) {
+    margin-top: 60px;
+  }
+`

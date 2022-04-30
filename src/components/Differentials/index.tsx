@@ -9,6 +9,7 @@ import { Title } from "@components/Title";
 //Styles
 import {
   Container,
+  Description,
   GridCards,
   Embla,
   EmblaContainer,
@@ -21,6 +22,7 @@ const prop = [
     title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nulla magnam quis voluptate repellat nesciunt ea, dol.",
+    primary: true,
   },
   {
     icon: "/components/CardDifferentials/Icon.png",
@@ -52,6 +54,13 @@ export function Differentials() {
   return (
     <Container>
       <Title>Diferenciais</Title>
+
+      <Description>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra porta
+        pellentesque amet, amet, commodo enim. Lectus imperdiet morbi morbi
+        pharetra eu ipsum aliquam id sit. Vestibulum auctor risus fusce leo.
+        Molestie sit condimentum ut pellentesque tortor.
+      </Description>
 
       {/* CARROSSEL DESKTOP */}
       <GridCards>

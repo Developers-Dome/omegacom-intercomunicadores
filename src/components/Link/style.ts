@@ -5,16 +5,17 @@ import f from "@styles/typograph.json";
 
 interface LinkProps {
   background?: boolean;
+  fullWidth?: boolean;
 }
 
 export const Container = styled.a<LinkProps>`
-  width: fit-content;
+  width: ${(props) => (props.fullWidth ? "100%" : "fit-content")};
 
   padding: 0.5rem 1.25rem;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: ${(props) => (props.fullWidth ? "center" : "space-between")};
   gap: 1rem;
 
   font-family: Montserrat, sans-serif;

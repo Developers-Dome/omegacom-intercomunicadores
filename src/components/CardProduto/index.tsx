@@ -22,7 +22,7 @@ export function CardProduto({ props }: CardProdutoProps) {
 
       <p>{props.model}</p>
 
-      <LinkItem href={props.link} transparent icon={<FaArrowRight />}>
+      <LinkItem href={props.link} transparent icon={<FaArrowRight />} fullWidth>
         VER MODELO
       </LinkItem>
     </Container>

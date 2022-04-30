@@ -4,6 +4,7 @@ import f from "@styles/typograph.json";
 
 export const Container = styled.section`
   width: 320px;
+  /* max-width: 360px; */
   height: 300px;
 
   padding: 20px;
@@ -14,11 +15,12 @@ export const Container = styled.section`
 
   position: relative;
 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   div {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: 40px;
 
     display: block;

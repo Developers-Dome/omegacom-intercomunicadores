@@ -4,6 +4,15 @@ import Head from "next/head";
 import type { NextPage } from "next";
 
 // Styles
+import styled from "styled-components";
+
+const Container = styled.main`
+  padding-top: 20px;
+
+  @media (min-width: 1024px) {
+    padding-top: 120px;
+  }
+`;
 
 // Images
 
@@ -12,12 +21,12 @@ import { AccordionContainer } from "@components/AccordionContainer";
 
 const FAQ: NextPage = () => {
   return (
-    <>
+    <Container>
     <Head>
-      <title>FAQ</title>
+      <title>OmegaCom | FAQ</title>
     </Head>
     <AccordionContainer />
-    </>
+    </Container>
   );
 };
 

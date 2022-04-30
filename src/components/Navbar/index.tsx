@@ -13,8 +13,8 @@ import {
   IconContainer,
   MenuIcon,
   Menu,
+  Button,
 } from "./style";
-import Button from "@components/Link";
 import { BsWhatsapp } from "react-icons/bs";
 
 interface NavbarProps {
@@ -54,7 +54,7 @@ const prop: NavbarProps = {
     },
   },
   button: {
-    text: "PEÇA JÁ O SEU",
+    text: "Peça já o seu",
     link: "/",
   },
 };
@@ -79,7 +79,7 @@ export default function Navbar() {
         //Desk Version
         <Desk>
           {prop.logo ? (
-            <Link href="/">
+            <Link href="/" passHref>
               <a>
                 <img src={prop.logo} />
               </a>
@@ -98,9 +98,11 @@ export default function Navbar() {
               })}
             </NavLinks>
             <NavButtons>
-              <Button href={prop.button.link} icon={<BsWhatsapp />}>
-                {prop.button.text}
-              </Button>
+              <Link href={prop.button.link} passHref>
+                <Button>
+                  {prop.button.text} <BsWhatsapp />
+                </Button>
+              </Link>
             </NavButtons>
           </LinksContainer>
         </Desk>
@@ -108,7 +110,7 @@ export default function Navbar() {
         //Mobile/Tablet Version
         <Mobile>
           <IconContainer>
-            <Link href="/">
+            <Link href="/" passHref>
               <a>{prop.logo_mobile ? <img src={prop.logo_mobile} /> : null}</a>
             </Link>
             <MenuIcon className={active ? "open" : ""} onClick={Toggle} />
@@ -118,15 +120,17 @@ export default function Navbar() {
               {Object.values(prop.links).map((value, index) => {
                 return (
                   <>
-                    <Link href={value.link} key={index}>
+                    <Link href={value.link} key={index} passHref>
                       <li>{value.text}</li>
                     </Link>
                   </>
                 );
               })}
-              <Button href={prop.button.link} icon={<BsWhatsapp />}>
-                {prop.button.text}
-              </Button>
+              <Link href={prop.button.link} passHref>
+                <Button href={prop.button.link}>
+                  {prop.button.text} <BsWhatsapp />
+                </Button>
+              </Link>
             </ul>
           </Menu>
         </Mobile>

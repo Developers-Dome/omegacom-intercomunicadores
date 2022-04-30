@@ -13,6 +13,7 @@ export const Container = styled.section`
     url("./components/Hero/bg.jpeg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   @media (min-width: 1023px) {
     background: linear-gradient(
@@ -21,11 +22,14 @@ export const Container = styled.section`
         rgba(0, 0, 0, 0.63) 47.9%
       ),
       url("./components/Hero/bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 `;
 
 export const Content = styled.div`
-  max-width: 1240px;
+  max-width: 1440px;
   min-height: 100vh;
 
   margin: 0 auto;

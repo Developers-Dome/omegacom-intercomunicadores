@@ -1,21 +1,39 @@
 import styled from "styled-components";
 
+import c from "@styles/colors.json";
+import f from "@styles/typograph.json";
+
 export const Container = styled.div`
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 60px 5% 0;
   margin: auto;
+
+  @media (min-width: 1024px) {
+    padding: 100px 5% 0;
+  }
+`;
+
+export const Description = styled.p`
+  max-width: 1000px;
+  margin: 40px auto 0;
+
+  font-size: ${f.paragraphSmall.fontSize};
+  line-height: ${f.paragraphSmall.lineHeight};
+  text-align: center;
+
+  color: ${c.neutral400};
 `;
 
 export const GridCards = styled.div`
-  margin: 60px auto 60px auto;
+  margin: 60px auto 0;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   grid-column-gap: 22px;
   grid-row-gap: 22px;
   flex-wrap: wrap;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
@@ -31,7 +49,7 @@ export const Embla = styled.div`
 
   overflow: hidden;
 
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;

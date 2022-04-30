@@ -1,23 +1,32 @@
 import styled from "styled-components"
-import c from "../../../styles/colors.json"
-import t from "../../../styles/typograph.json"
+import c from "@styles/colors.json"
+import t from "@styles/typograph.json"
 
-export const CardContainer = styled.div`
+interface CardDifferentialsProps {
+  primary?: boolean;
+}
+
+export const CardContainer = styled.div<CardDifferentialsProps>`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  width: 300px;
+  width: 290px;
   height: 400px;
   padding:  48px 30px;
 
+  background: ${props => props.primary ? c.primary300 : c.white};
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 `;
 
-export const Icon = styled.img`
+export const Icon = styled.img<CardDifferentialsProps>`
   width: 72px;
   height: 72px;
+
+  border: ${props => props.primary ? `2px solid ${c.white}` : "none"};
+  border-radius: 50%;
 `;
 
 export const LineContainer = styled.div`
@@ -42,17 +51,19 @@ export const CardContent = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h2<CardDifferentialsProps>`
   font-size: ${t.paragraphLarge.fontSize};
   font-weight: ${t.paragraphLarge.fontWeight.bold};
   line-height: ${t.paragraphLarge.lineHeight};
+  color: ${props => props.primary ? c.white : c.black};
 `;
 
-export const Description = styled.span`
+export const Description = styled.span<CardDifferentialsProps>`
   padding-top: 10px;
 
   color: ${c.neutral500};
   font-size: ${t.paragraphSmall.fontSize};
   font-weight: ${t.paragraphSmall.fontWeight.medium};
   line-height: ${t.paragraphSmall.lineHeight};
+  color: ${props => props.primary ? c.neutral100 : c.black};
 `;

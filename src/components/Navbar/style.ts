@@ -10,7 +10,7 @@ export const Container = styled.nav`
     justify-content: center;
 
     width: 100vw;
-    height: 80px;
+    height: 70px;
 
     background: white;
     box-shadow: 3px 3px 12px 0px #00000026;
@@ -26,7 +26,7 @@ export const Desk = styled.div`
   max-width: 1440px;
   justify-content: space-between;
 
-  height: 80px;
+  height: 70px;
   width: 100%;
 
   padding: 0 5%;
@@ -49,9 +49,9 @@ export const NavLinks = styled.div`
 
     cursor: pointer;
 
-    font-size: ${t.h4.fontSize};
-    font-weight: ${t.h4.fontWeight.medium};
-    line-height: ${t.h4.lineHeight};
+    font-size: ${t.h5.fontSize};
+    font-weight: ${t.h5.fontWeight.medium};
+    line-height: ${t.h5.lineHeight};
     color: ${c.neutral500};
 
     &::after {
@@ -63,7 +63,7 @@ export const NavLinks = styled.div`
         height: 3px;
         content: "";
 
-        background: ${c.neutral600};
+        background: ${c.primary300};
         transition: 0.2s;
       }
     &:hover::after {
@@ -281,3 +281,29 @@ export const IconContainer = styled.div`
     margin: 6px 0;
   }
 `;
+
+export const Button = styled.a`
+  width: 220px;
+
+  padding: 8px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  font-family: Montserrat, sans-serif;
+  font-size: ${t.h5.fontSize};
+  font-weight: 700;
+  color: ${c.white};
+
+  background: ${c.primary300};
+  border-radius: 0.3rem;
+
+  transition: 0.2s;
+
+  &:hover {
+    background: ${c.primary200};
+    color: ${c.white};
+  }
+`

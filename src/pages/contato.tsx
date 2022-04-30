@@ -5,6 +5,13 @@ import type { NextPage } from "next";
 import { Formulario } from "@components/Formulario";
 
 // Styles
+import styled from "styled-components";
+
+const Container = styled.main`
+  @media (min-width: 1024px) {
+    padding-top: 70px;
+  }
+`;
 
 // Images
 
@@ -12,13 +19,13 @@ import { Formulario } from "@components/Formulario";
 
 const Contato: NextPage = () => {
   return (
-    <>
+    <Container>
     <Head>
-      <title>Contato</title>
+      <title>OmegaCom | Contato</title>
     </Head>
 
     <Formulario />
-    </>
+    </Container>
   );
 };
 

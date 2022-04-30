@@ -13,7 +13,9 @@ import {
   Embla,
   EmblaContainer,
   EmblaSlide,
+  Button
 } from "./style";
+import LinkItem from "@components/Link";
 
 const prop = [
   {
@@ -61,6 +63,10 @@ export function PrincipaisProdutos() {
           ))}
         </EmblaContainer>
       </Embla>
+
+      <Button>
+        <LinkItem href="/produtos">Ver todos produtos</LinkItem>
+      </Button>
     </Container>
   );
 }

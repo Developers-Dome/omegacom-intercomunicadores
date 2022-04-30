@@ -4,24 +4,29 @@ import Head from "next/head";
 import type { NextPage } from "next";
 
 // Styles
+import styled from "styled-components";
 
-// Images
+const Container = styled.main`
+  padding-top: 20px;
+
+  @media (min-width: 1024px) {
+    padding-top: 120px;
+  }
+`;
 
 // Components
 import { NossosModelos } from "@components/NossosModelos";
 import { Title } from "@components/Title";
 
-
-
 const Produtos: NextPage = () => {
   return (
-    <>
+    <Container>
       <Head>
-        <title>Título da página</title>
+        <title>OmegaCom | Produtos</title>
       </Head>
       <Title>Nossos modelos</Title>
-    <NossosModelos />
-    </>
+      <NossosModelos />
+    </Container>
   );
 };
 

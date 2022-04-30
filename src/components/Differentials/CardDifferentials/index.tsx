@@ -17,19 +17,22 @@ interface CardProps {
     icon: string;
     title: string;
     description: string;
+    primary?: boolean;
   };
 }
 
 export function CardDifferentials({ props }: CardProps) {
   return (
-    <CardContainer>
-      {props.icon && <Icon src={props.icon} />}
+    <CardContainer primary={props.primary}>
+      {props.icon && <Icon src={props.icon} primary={props.primary} />}
       <LineContainer>
         <Line />
       </LineContainer>
       <CardContent>
-        {props.title && <Title>{props.title}</Title>}
-        {props.description && <Description>{props.description}</Description>}
+        {props.title && <Title primary={props.primary}>{props.title}</Title>}
+        {props.description && (
+          <Description primary={props.primary}>{props.description}</Description>
+        )}
       </CardContent>
     </CardContainer>
   );
