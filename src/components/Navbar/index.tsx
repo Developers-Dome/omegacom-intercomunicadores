@@ -15,7 +15,7 @@ import {
   Menu,
 } from "./style";
 import Button from "@components/Link";
-import { BsWhatsapp } from "react-icons/Bs";
+import { BsWhatsapp } from "react-icons/bs";
 
 interface NavbarProps {
   logo?: string;

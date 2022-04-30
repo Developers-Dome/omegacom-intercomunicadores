@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Content } from "./styles";
 
-import { LinkItem } from "../Link";
 import { BsWhatsapp } from "react-icons/bs";
+import LinkItem from "@components/Link";
 
 export function Hero() {
   return (
