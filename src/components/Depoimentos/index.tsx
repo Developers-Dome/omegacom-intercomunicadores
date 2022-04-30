@@ -4,10 +4,10 @@ import useEmblaCarousel from "embla-carousel-react";
 
 //Components
 import { CardDepoimento } from "./CardDepoimento";
-import { Title } from "@components/Title";
 
 //Styles
 import { Container, Embla, EmblaContainer, EmblaSlide } from "./styles";
+import { Title } from "@components/Title";
 
 const props = [
   {

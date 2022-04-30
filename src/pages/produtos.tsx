@@ -20,7 +20,6 @@ const Produtos: NextPage = () => {
         <title>Título da página</title>
       </Head>
       <Title>Nossos modelos</Title>
-
     <NossosModelos />
     </>
   );

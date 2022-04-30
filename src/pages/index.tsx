@@ -9,6 +9,9 @@ import type { NextPage } from "next";
 
 // Components
 import { Hero } from "../components/Hero";
+import { Differentials } from "@components/Differentials";
+import { PrincipaisProdutos } from "@components/PrincipaisProdutos";
+import { Depoimentos } from "@components/Depoimentos";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +20,9 @@ const Home: NextPage = () => {
         <title>Título da página</title>
       </Head>
       <Hero />
+      <Differentials />
+      <PrincipaisProdutos />
+      <Depoimentos />
     </>
   );
 };
