@@ -1,4 +1,18 @@
 {
   "white": "#FFFFFF",
-  "black": "#000000"
+  "black": "#000000",
+  "primary100": "#5C69E4",
+  "primary200": "#4751AF",
+  "primary300": "#363E87",
+  "primary400": "#2C3270",
+  "primary500": "#141A53",
+  "secondary100": "#A2B0A5",
+  "secondary200": "#808D83",
+  "secondary300": "#616C64",
+  "secondary400": "#484F4A",
+  "secondary500": "#282E29",
+  "neutral100": "#FBFBFB",
+  "neutral400": "#767676",
+  "neutral500": "#363434",
+  "neutral600": "#232222"
 }

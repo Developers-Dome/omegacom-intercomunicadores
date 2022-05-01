@@ -24,6 +24,7 @@ time, mark, audio, video {
   text-decoration: none;
   box-sizing: border-box;
 	font: inherit;
+  font-family: 'Montserrat', sans-serif;
   color: inherit;
 }
 article, aside, details, figcaption, figure,
@@ -44,6 +45,16 @@ button {
 @media(max-width: 767px) {
   html {
     font-size: 87.5%;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 5%;
+
+  @media (min-width: 1024px){
+    padding: 40px 5%;
   }
 }
 `;
