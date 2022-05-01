@@ -7,13 +7,20 @@ interface LinkProps {
   href: string;
   transparent?: boolean;
   icon?: ReactNode;
+  fullWidth?: boolean;
 }
 
-export function LinkItem({ children, href, transparent, icon }: LinkProps) {
+export default function LinkItem({
+  children,
+  href,
+  transparent,
+  icon,
+  fullWidth
+}: LinkProps) {
   return (
     <>
       <Link href={href} passHref>
-        <Container background={transparent}>
+        <Container background={transparent} fullWidth={fullWidth}>
           {children}
           {icon}
         </Container>

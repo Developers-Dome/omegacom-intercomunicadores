@@ -1,94 +1,85 @@
-// Libs
+//Libs
+import useEmblaCarousel from "embla-carousel-react";
 import React from "react";
 
-// Components
-import Card from "../CardDifferentials";
+//Components
+import { CardDifferentials } from "@components/Differentials/CardDifferentials";
+import { Title } from "@components/Title";
 
-// Styles
-import { CardsContainer } from "./style";
-import Title from "../Title";
-import Description from "../Description";
+//Styles
+import {
+  Container,
+  Description,
+  GridCards,
+  Embla,
+  EmblaContainer,
+  EmblaSlide,
+} from "./styles";
 
-interface DifferentialsProps {
-  title: string;
-  description: string;
-  cards: {
-    card1: {
-      icon: string;
-      title: string;
-      description: string;
-    };
-    card2: {
-      icon: string;
-      title: string;
-      description: string;
-    };
-    card3: {
-      icon: string;
-      title: string;
-      description: string;
-    };
-    card4: {
-      icon: string;
-      title: string;
-      description: string;
-    };
-  };
-}
-
-const prop: DifferentialsProps = {
-  title: "Diferenciais",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra porta pellentesque amet, amet, commodo enim. Lectus imperdiet morbi morbi pharetra eu ipsum aliquam id sit. Vestibulum auctor risus fusce leo. Molestie sit condimentum ut pellentesque tortor.",
-  cards: {
-    card1: {
-      icon: "./components/CardDifferentials/icon.png",
-      title: "Lorem ipsum",
-      description:
-        "Lor risus fusce leo.  ut pellentesque tortor.Lor risus fusce leo.  ut pellentesque tortor.",
-    },
-    card2: {
-      icon: "./components/CardDifferentials/icon.png",
-      title: "Lorem ipsum",
-      description:
-        "Lor risus fusce leo.  ut pellentesque tortor.Lor risus fusce leo.  ut pellentesque tortor.",
-    },
-    card3: {
-      icon: "./components/CardDifferentials/icon.png",
-      title: "Lorem ipsum",
-      description:
-        "Lor risus fusce leo.  ut pellentesque tortor.Lor risus fusce leo.  ut pellentesque tortor.",
-    },
-    card4: {
-      icon: "./components/CardDifferentials/icon.png",
-      title: "Lorem ipsum",
-      description:
-        "Lor risus fusce leo.  ut pellentesque tortor.Lor risus fusce leo.  ut pellentesque tortor.",
-    },
+const prop = [
+  {
+    icon: "/components/CardDifferentials/Icon.png",
+    title: "Lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nulla magnam quis voluptate repellat nesciunt ea, dol.",
+    primary: true,
   },
-};
+  {
+    icon: "/components/CardDifferentials/Icon.png",
+    title: "Lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nulla magnam quis voluptate repellat nesciunt ea, dol.",
+  },
+  {
+    icon: "/components/CardDifferentials/Icon.png",
+    title: "Lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nulla magnam quis voluptate repellat nesciunt ea, dol.",
+  },
+  {
+    icon: "/components/CardDifferentials/Icon.png",
+    title: "Lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nulla magnam quis voluptate repellat nesciunt ea, dol.",
+  },
+];
 
-export default function Differentials() {
+export function Differentials() {
+  const [emblaRef] = useEmblaCarousel({
+    loop: false,
+    align: "start",
+    skipSnaps: true,
+  });
+
   return (
-    <div className="container">
+    <Container>
       <Title>Diferenciais</Title>
+
       <Description>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra porta
         pellentesque amet, amet, commodo enim. Lectus imperdiet morbi morbi
-        pharetra eu ipsum aliquam id sit. Vestibulum auctor leo. Molestie sit
-        condimentum ut pellentesque tortor.
+        pharetra eu ipsum aliquam id sit. Vestibulum auctor risus fusce leo.
+        Molestie sit condimentum ut pellentesque tortor.
       </Description>
-      <CardsContainer>
-        {Object.values(prop.cards)
-          .filter((card) => card.title)
-          .map((value) => {
-            return (
-              <>
-                <Card props={value} />
-              </>
-            );
-          })}
-      </CardsContainer>
-    </div>
+
+      {/* CARROSSEL DESKTOP */}
+      <GridCards>
+        {Object.values(prop).map((card) => {
+          return <CardDifferentials props={card} key={card.title} />;
+        })}
+      </GridCards>
+
+      {/* CARROSSEL MOBILE */}
+      <Embla ref={emblaRef}>
+        <EmblaContainer>
+          {Object.values(prop).map((card, index) => (
+            <EmblaSlide key={index}>
+              <CardDifferentials props={card} />
+            </EmblaSlide>
+          ))}
+        </EmblaContainer>
+      </Embla>
+    </Container>
   );
 }
+

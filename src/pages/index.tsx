@@ -3,20 +3,24 @@ import React from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 
-// Styles
-
 // Images
 
 // Components
-import Differentials from "@components/Differentials";
+import { Hero } from "../components/Hero";
+import { Differentials } from "@components/Differentials";
+import { PrincipaisProdutos } from "@components/PrincipaisProdutos";
+import { Depoimentos } from "@components/Depoimentos";
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Título da página</title>
+        <title>OmegaCom Intercomunicadores</title>
       </Head>
+      <Hero />
       <Differentials />
+      <PrincipaisProdutos />
+      <Depoimentos />
     </>
   );
 };

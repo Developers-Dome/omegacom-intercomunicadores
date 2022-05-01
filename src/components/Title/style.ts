@@ -16,26 +16,28 @@ export const Container = styled.h1`
 
   position: relative;
 
-  &::after,
-  ::before {
-    content: "";
-    display: block;
-    position: absolute;
+  @media (min-width: 450px) {
+    &::after,
+    ::before {
+      content: "";
+      display: block;
+      position: absolute;
 
-    height: 2px;
-    width: 50px;
+      height: 2px;
+      width: 50px;
 
-    background: ${c.primary300};
-  }
+      background: ${c.primary300};
+    }
 
-  &::after {
-    left: -60px;
-    top: 50%;
-  }
+    &::after {
+      left: -60px;
+      top: 50%;
+    }
 
-  &::before {
-    right: -60px;
-    top: 50%;
+    &::before {
+      right: -60px;
+      top: 50%;
+    }
   }
 
   @media (min-width: 1023px) {
