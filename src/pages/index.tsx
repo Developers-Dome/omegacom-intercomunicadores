@@ -8,12 +8,16 @@ import type { NextPage } from "next";
 // Images
 
 // Components
+import Differentials from "@components/Differentials";
 
 const Home: NextPage = () => {
   return (
-    <Head>
-      <title>Título da página</title>
-    </Head>
+    <>
+      <Head>
+        <title>Título da página</title>
+      </Head>
+      <Differentials />
+    </>
   );
 };
 
