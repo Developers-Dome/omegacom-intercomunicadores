@@ -10,6 +10,7 @@ import { Hero } from "../components/Hero";
 import { Differentials } from "@components/Differentials";
 import { PrincipaisProdutos } from "@components/PrincipaisProdutos";
 import { Depoimentos } from "@components/Depoimentos";
+import Footer from "@components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       <Differentials />
       <PrincipaisProdutos />
       <Depoimentos />
+      <Footer />
     </>
   );
 };

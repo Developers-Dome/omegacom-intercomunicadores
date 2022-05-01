@@ -116,7 +116,7 @@ export default function Navbar() {
             <MenuIcon className={active ? "open" : ""} onClick={Toggle} />
           </IconContainer>
           <Menu className={active ? "menuOpen" : ""}>
-            <ul>
+            <ul key="links-container">
               {Object.values(prop.links).map((value, index) => {
                 return (
                   <>
