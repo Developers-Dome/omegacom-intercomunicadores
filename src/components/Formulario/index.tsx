@@ -22,8 +22,7 @@ export function Formulario() {
         <div>
           {width > 1024 ? (
             <h2>
-              Entre em contato e descubra o melhor intercomunicador para o seu
-              negócio
+              Descubra o melhor intercomunicador para seu negócio!
             </h2>
           ) : (
             <Title>Fale conosco</Title>

@@ -13,7 +13,7 @@ export const Container = styled.main`
       top: 0;
 
       width: 100%;
-      height: 550px;
+      height: 450px;
 
       background: ${c.primary300};
       z-index: -1;
@@ -25,7 +25,7 @@ export const Content = styled.div`
   max-width: 1440px;
 
   margin: 0 auto;
-  padding: 40px 5%;
+  padding: 20px 5%;
 
   display: flex;
   flex-direction: column;
@@ -63,6 +63,8 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  border: 2px solid ${c.primary300};
 
   @media (min-width: 1024px) {
     padding: 20px;

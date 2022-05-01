@@ -4,8 +4,7 @@ export const Container = styled.div`
   max-width: 1440px;
 
   margin: 0 auto;
-  padding: 0 5%;
-  padding-top: 40px;
+  padding: 40px 5%;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -14,6 +13,6 @@ export const Container = styled.div`
   column-gap: 1rem;
 
   @media (min-width: 1024px) {
-    padding-top: 80px;
+    padding: 80px 5%;
   }
 `

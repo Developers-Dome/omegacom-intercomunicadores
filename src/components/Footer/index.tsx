@@ -75,39 +75,46 @@ export default function Footer() {
           <img src={prop.logo} />
         </LogoContainer>
         <div>
-          <Title>ONDE ESTAMOS</Title>
-          <ContactContainer>
-            {Object.values(prop.contact).map((value, index) => {
-              return (
-                <Contact key={index}>
-                  {value.icon && <img src={value.icon} />}{" "}
-                  {value.text && <span>{value.text}</span>}
-                </Contact>
-              );
-            })}
-          </ContactContainer>
-        </div>
-        <div>
-          <Title>NAVEGUE PELO SITE</Title>
-          <ul>
-            {Object.values(prop.links).map((value, index) => {
-              return (
-                <>
-                  <Link href={value.link} passHref>
+          <div>
+            <Title>ONDE ESTAMOS</Title>
+            <ContactContainer>
+              {Object.values(prop.contact).map((value, index) => {
+                return (
+                  <Contact key={index}>
+                    {value.icon && <img src={value.icon} />}{" "}
+                    {value.text && <span>{value.text}</span>}
+                  </Contact>
+                );
+              })}
+            </ContactContainer>
+          </div>
+          <div>
+            <Title>NAVEGUE PELO SITE</Title>
+            <ul>
+              {Object.values(prop.links).map((value, index) => {
+                return (
+                  <>
                     <FooterLinks key={index}>
-                      {value.text && <span>{value.text}</span>}
+                      <Link href={value.link} passHref>
+                        {value.text && <a>{value.text}</a>}
+                      </Link>
                     </FooterLinks>
-                  </Link>
-                </>
-              );
-            })}
-          </ul>
-        </div>
-        <div>
-          <Title style={{ marginBottom: "20px" }}>COMPRE CONOSCO</Title>
-          <Link href="/" passHref>
-            <img src="./components/Footer/mercado-livre.png" />
-          </Link>
+                  </>
+                );
+              })}
+            </ul>
+          </div>
+          <div>
+            <Title style={{ marginBottom: "20px" }}>COMPRE CONOSCO</Title>
+            <Link href="/" passHref>
+              <a>
+                <img
+                  style={{ cursor: "pointer" }}
+                  src="./components/Footer/mercado-livre.png"
+                />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
       <Copyright>CopyRight de algum lugar </Copyright>

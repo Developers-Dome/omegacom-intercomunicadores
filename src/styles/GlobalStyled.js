@@ -51,10 +51,10 @@ button {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 5%;
+  padding: 20px 5%;
 
   @media (min-width: 1024px){
-    padding: 100px 5%;
+    padding: 40px 5%;
   }
 }
 `;

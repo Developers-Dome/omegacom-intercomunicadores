@@ -23,7 +23,7 @@ export function LabelInput({
         {label}
       </label>
       {type === "textarea" ? (
-        <textarea name={name} placeholder={placeholder} rows={7} />
+        <textarea name={name} placeholder={placeholder} rows={5} />
       ) : (
         <input
           type={type}

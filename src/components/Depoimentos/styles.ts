@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding: 60px 5% 0;
+  padding: 60px 5%;
   margin: auto;
 
   @media (min-width: 1024px) {
-    padding: 100px 5% 0;
+    padding: 100px 5%;
   }
 `;
 
