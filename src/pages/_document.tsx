@@ -43,10 +43,8 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,700,900,italic,700italic,900italic" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Roboto:regular,italic,700,700italic,900,900italic" rel="stylesheet" />
 
-          <meta name="description" content="ESCREVER DEPOIS" />
+          <meta name="description" content="Intercomunicador para lotéricas, condomínios, bilheteria, estádio. Agilize o atendimento e evite gritaria do seu cliente, diminuindo a fila." />
           <meta name="author" content="developers-dome" />
-
-          <link rel="shortcut icon" href="/favicone.png" />
         </Head>
         <body>
           <Main />

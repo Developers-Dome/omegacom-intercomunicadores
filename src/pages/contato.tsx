@@ -2,7 +2,10 @@
 import React from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
-import { Formulario } from "@components/Formulario";
+import { Form } from "@components/Form";
+
+// Imgs
+import Fav from '../../public/favicon.png'
 
 // Styles
 import styled from "styled-components";
@@ -13,18 +16,15 @@ const Container = styled.main`
   }
 `;
 
-// Images
-
-// Components
-
 const Contato: NextPage = () => {
   return (
     <Container>
     <Head>
       <title>OmegaCom | Contato</title>
+      <link rel="shortcut icon" href={Fav.src} type="image/x-icon" />
     </Head>
 
-    <Formulario />
+    <Form />
     </Container>
   );
 };

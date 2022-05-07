@@ -19,7 +19,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	vertical-align: baseline;
   scroll-behavior: smooth;
   text-decoration: none;
   box-sizing: border-box;

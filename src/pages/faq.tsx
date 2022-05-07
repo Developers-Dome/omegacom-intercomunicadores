@@ -3,6 +3,9 @@ import React from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 
+// Imgs
+import Fav from "../../public/favicon.png";
+
 // Styles
 import styled from "styled-components";
 
@@ -14,18 +17,17 @@ const Container = styled.main`
   }
 `;
 
-// Images
-
 // Components
 import { AccordionContainer } from "@components/AccordionContainer";
 
 const FAQ: NextPage = () => {
   return (
     <Container>
-    <Head>
-      <title>OmegaCom | FAQ</title>
-    </Head>
-    <AccordionContainer />
+      <Head>
+        <title>OmegaCom | FAQ</title>
+        <link rel="shortcut icon" href={Fav.src} type="image/x-icon" />
+      </Head>
+      <AccordionContainer />
     </Container>
   );
 };

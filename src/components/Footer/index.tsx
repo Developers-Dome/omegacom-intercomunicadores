@@ -26,6 +26,7 @@ interface FooterProps {
     [key: string]: {
       icon: string;
       text?: string;
+      link?: string;
     };
   };
 }
@@ -58,11 +59,13 @@ const prop: FooterProps = {
     },
     email: {
       icon: "./components/Footer/email.png",
-      text: "email123@gmail.com",
+      text: "omegacom@gmail.com",
+      link: "mailto:omegacom@gmail.com",
     },
     tel: {
       icon: "./components/Footer/wpp_small.png",
-      text: "(15) 98181-8181",
+      text: "(11) 94443-1037",
+      link: "tel:11944431037",
     },
   },
 };
@@ -72,7 +75,11 @@ export default function Footer() {
     <FooterContainer>
       <div className="container">
         <LogoContainer>
-          <img src={prop.logo} />
+          <Link href="/" passHref>
+            <a>
+              <img src={prop.logo} />
+            </a>
+          </Link>
         </LogoContainer>
         <div>
           <div>
@@ -82,7 +89,7 @@ export default function Footer() {
                 return (
                   <Contact key={index}>
                     {value.icon && <img src={value.icon} />}{" "}
-                    {value.text && <span>{value.text}</span>}
+                    {value.text && <a href={value.link}>{value.text}</a>}
                   </Contact>
                 );
               })}
@@ -106,8 +113,11 @@ export default function Footer() {
           </div>
           <div>
             <Title style={{ marginBottom: "20px" }}>COMPRE CONOSCO</Title>
-            <Link href="/" passHref>
-              <a>
+            <Link
+              href="https://lista.mercadolivre.com.br/_CustId_226656936?item_id=MLB1424047684&category_id=MLB7075&seller_id=226656936&client=recoview-selleritems&recos_listing=true"
+              passHref
+            >
+              <a target="_blank">
                 <img
                   style={{ cursor: "pointer" }}
                   src="./components/Footer/mercado-livre.png"
@@ -117,7 +127,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <Copyright>CopyRight de algum lugar </Copyright>
+      <Copyright>Copyright © 2022 | OmegaCom Intercomunicadores</Copyright>
     </FooterContainer>
   );
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 1440px;
 
-  padding: 0 5%;
+  padding: 0 5% 20px;
   margin: 0 auto;
 
   display: flex;
@@ -12,5 +12,7 @@ export const Container = styled.div`
 
   @media (min-width: 1024px) {
     gap: 40px;
+
+    padding-bottom: 40px;
   }
 `

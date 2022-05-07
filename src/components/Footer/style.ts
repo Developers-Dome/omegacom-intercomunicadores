@@ -64,8 +64,15 @@ export const Contact = styled.li`
   font-weight: ${f.h5.fontWeight.medium};
   line-height: ${f.h5.lineHeight};
 
-  span {
+  a {
     margin-left: 10px;
+
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    border-bottom: 2px solid ${c.primary300};
   }
 `;
 

@@ -10,7 +10,7 @@ export const Container = styled.section`
       rgba(0, 0, 0, 0) 9.95%,
       rgba(0, 0, 0, 0.63) 45.35%
     ),
-    url("./components/Hero/bg.jpeg");
+    url("./components/Hero/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,10 +18,10 @@ export const Container = styled.section`
   @media (min-width: 1023px) {
     background: linear-gradient(
         270deg,
-        rgba(0, 0, 0, 0) 40.03%,
-        rgba(0, 0, 0, 0.63) 47.9%
+        rgba(0, 0, 0, 0) 38%,
+        rgba(0, 0, 0, 0.6) 50%
       ),
-      url("./components/Hero/bg.jpeg");
+      url("./components/Hero/bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

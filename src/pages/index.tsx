@@ -3,24 +3,26 @@ import React from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 
-// Images
+// Imgs
+import Fav from "../../public/favicon.png";
 
 // Components
 import { Hero } from "../components/Hero";
 import { Differentials } from "@components/Differentials";
-import { PrincipaisProdutos } from "@components/PrincipaisProdutos";
-import { Depoimentos } from "@components/Depoimentos";
+import { MainModels } from "@components/MainModels";
+import { Depositions } from "@components/Depositions";
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
         <title>OmegaCom Intercomunicadores</title>
+        <link rel="shortcut icon" href={Fav.src} type="image/x-icon" />
       </Head>
       <Hero />
       <Differentials />
-      <PrincipaisProdutos />
-      <Depoimentos />
+      <MainModels />
+      <Depositions />
     </>
   );
 };
