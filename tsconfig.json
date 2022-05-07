@@ -31,6 +31,6 @@
     "**/*.tsx",
     "src/pages/index.js",
     "src/pages/_document.jsx"
-  ],
+, "next.config.js"  ],
   "exclude": ["node_modules"]
 }
