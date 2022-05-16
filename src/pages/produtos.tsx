@@ -3,6 +3,9 @@ import React from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 
+// Imgs
+import Fav from "../../public/favicon.png";
+
 // Styles
 import styled from "styled-components";
 
@@ -15,7 +18,7 @@ const Container = styled.main`
 `;
 
 // Components
-import { NossosModelos } from "@components/NossosModelos";
+import { OurModels } from "@components/OurModels";
 import { Title } from "@components/Title";
 
 const Produtos: NextPage = () => {
@@ -23,9 +26,10 @@ const Produtos: NextPage = () => {
     <Container>
       <Head>
         <title>OmegaCom | Produtos</title>
+        <link rel="shortcut icon" href={Fav.src} type="image/x-icon" />
       </Head>
       <Title>Nossos modelos</Title>
-      <NossosModelos />
+      <OurModels />
     </Container>
   );
 };

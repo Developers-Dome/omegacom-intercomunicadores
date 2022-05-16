@@ -1,6 +1,6 @@
 import React from "react";
 import type { AppProps } from "next/app";
-import GlobalStyled from "../styles/GlobalStyled.js";
+import GlobalStyled from "../styles/GlobalStyled";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 

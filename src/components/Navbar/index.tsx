@@ -98,7 +98,7 @@ export default function Navbar() {
               })}
             </NavLinks>
             <NavButtons>
-              <Link href={prop.button.link} passHref>
+              <Link href="https://api.whatsapp.com/send?phone=5511944431037&text=Oi%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20intercomunicadores." passHref>
                 <Button>
                   {prop.button.text} <BsWhatsapp />
                 </Button>

@@ -56,10 +56,8 @@ export function Differentials() {
       <Title>Diferenciais</Title>
 
       <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra porta
-        pellentesque amet, amet, commodo enim. Lectus imperdiet morbi morbi
-        pharetra eu ipsum aliquam id sit. Vestibulum auctor risus fusce leo.
-        Molestie sit condimentum ut pellentesque tortor.
+        Atuando no mercado a mais de 10 anos, conquistamos espaço e respeito no
+        ramo de lotéricas e condôminios de todo o Brasil. Produto exclusivo e resistente é perfeito para a comunicação.
       </Description>
 
       {/* CARROSSEL DESKTOP */}
@@ -82,4 +80,3 @@ export function Differentials() {
     </Container>
   );
 }
-
