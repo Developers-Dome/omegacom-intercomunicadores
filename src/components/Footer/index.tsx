@@ -32,8 +32,8 @@ interface FooterProps {
 }
 
 const prop: FooterProps = {
-  logo: "./components/Navbar/navbar_logo.png",
-  logo_mobile: "./components/Navbar/navbar_logo.png",
+  logo: "/components/Navbar/navbar_logo.png",
+  logo_mobile: "/components/Navbar/navbar_logo.png",
   links: {
     link1: {
       text: "Início",
@@ -54,16 +54,16 @@ const prop: FooterProps = {
   },
   contact: {
     address: {
-      icon: "./components/Footer/location.png",
+      icon: "/components/Footer/location.png",
       text: "Sorocaba - SP",
     },
     email: {
-      icon: "./components/Footer/email.png",
+      icon: "/components/Footer/email.png",
       text: "omegacom@gmail.com",
       link: "mailto:omegacom@gmail.com",
     },
     tel: {
-      icon: "./components/Footer/wpp_small.png",
+      icon: "/components/Footer/wpp_small.png",
       text: "(11) 94443-1037",
       link: "tel:11944431037",
     },
@@ -120,7 +120,7 @@ export default function Footer() {
               <a target="_blank">
                 <img
                   style={{ cursor: "pointer" }}
-                  src="./components/Footer/mercado-livre.png"
+                  src="/components/Footer/mercado-livre.png"
                 />
               </a>
             </Link>
