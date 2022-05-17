@@ -3,8 +3,9 @@ import { Container } from "./style";
 
 interface TitleProps {
   children: string;
+  small?: boolean
 }
 
-export function Title({ children }: TitleProps) {
-  return <Container>{children}</Container>;
+export function Title({ children, small }: TitleProps) {
+  return <Container small={small}>{children}</Container>;
 }

@@ -22,7 +22,6 @@ time, mark, audio, video {
   scroll-behavior: smooth;
   text-decoration: none;
   box-sizing: border-box;
-	font: inherit;
   font-family: 'Montserrat', sans-serif;
   color: inherit;
 }

@@ -44,8 +44,6 @@ export function MainModels() {
 
   return (
     <Container>
-      <Title>Principais modelos</Title>
-
       {/* CARROSSEL DESKTOP */}
       <GridCards>
         {Object.values(prop).map((card) => {
@@ -63,10 +61,6 @@ export function MainModels() {
           ))}
         </EmblaContainer>
       </Embla>
-
-      <Button>
-        <LinkItem href="/produtos">Ver todos produtos</LinkItem>
-      </Button>
     </Container>
   );
 }

@@ -16,6 +16,10 @@ export function PresentationProduct() {
           lacus, augue integer feugiat. Id etiam sit urna nunc, ac. Tortor id
           vel felis iaculis quis Mattis interdum gravida lobortis: Lorem ipsum
           Lorem ipsum Lorem ipsu
+          <ul>
+            <li>- Lorem ipsum</li>
+            <li>- Lorem ipsum</li>
+          </ul>
         </p>
 
         <ul>
@@ -23,14 +27,22 @@ export function PresentationProduct() {
             <img src="/components/PresentationProduct/CheckIcon.svg" alt="" />
             <span>Lorem ipsum</span>
           </li>
+          <li>
+            <img src="/components/PresentationProduct/CheckIcon.svg" alt="" />
+            <span>Lorem ipsum</span>
+          </li>
+          <li>
+            <img src="/components/PresentationProduct/CheckIcon.svg" alt="" />
+            <span>Lorem ipsum</span>
+          </li>
         </ul>
 
         <ContainerButton>
-          <Button href="/" transparent fullWidth>
-            Manual instalação
-          </Button>
           <Button href="/" fullWidth>
             COMPRE AGORA
+          </Button>
+          <Button href="/" transparent fullWidth>
+            Manual instalação
           </Button>
         </ContainerButton>
       </div>

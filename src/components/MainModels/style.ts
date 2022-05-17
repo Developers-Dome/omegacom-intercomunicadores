@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding: 60px 5% 0;
+  padding: 0 5%;
   margin: auto;
 
   @media (min-width: 1024px) {
-    padding: 100px 5% 0;
+    padding: 0 5%;
   }
 `;
 
 export const GridCards = styled.div`
-  margin: 60px auto 0;
+  margin: 0 auto;
 
   display: flex;
   justify-content: space-between;
