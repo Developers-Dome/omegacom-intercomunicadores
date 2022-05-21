@@ -2,50 +2,62 @@ import React from "react";
 
 import { SpecificProduct } from "@components/Slides/SpecificProduct";
 
-import { Container, ContainerButton } from "./styles";
+import { Title } from "@components/Title";
 import Button from "@components/Button";
+import {
+  Container,
+  ContentAndSlide,
+  ContainerButton,
+  ContentSpecific,
+} from "./styles";
 
-export function PresentationProduct() {
+interface PresentationProduct {
+  props: {
+    differentials: [string];
+    images: [string];
+    linkBuy: string;
+    linkManual: string;
+    description: string;
+    specification: string;
+  };
+}
+
+export function PresentationProduct({ props }: PresentationProduct) {
   return (
     <Container>
-      <SpecificProduct />
+      <ContentAndSlide>
+        <SpecificProduct images={props.images} />
 
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien tortor
-          lacus, augue integer feugiat. Id etiam sit urna nunc, ac. Tortor id
-          vel felis iaculis quis Mattis interdum gravida lobortis: Lorem ipsum
-          Lorem ipsum Lorem ipsu
+        <div>
+          <p>{props.description}</p>
+
           <ul>
-            <li>- Lorem ipsum</li>
-            <li>- Lorem ipsum</li>
+            {props.differentials.map((dif) => (
+              <li key={dif}>
+                <img
+                  src="/components/PresentationProduct/CheckIcon.svg"
+                  alt=""
+                />
+                <span>{dif}</span>
+              </li>
+            ))}
           </ul>
-        </p>
 
-        <ul>
-          <li>
-            <img src="/components/PresentationProduct/CheckIcon.svg" alt="" />
-            <span>Lorem ipsum</span>
-          </li>
-          <li>
-            <img src="/components/PresentationProduct/CheckIcon.svg" alt="" />
-            <span>Lorem ipsum</span>
-          </li>
-          <li>
-            <img src="/components/PresentationProduct/CheckIcon.svg" alt="" />
-            <span>Lorem ipsum</span>
-          </li>
-        </ul>
+          <ContainerButton>
+            <Button href={props.linkBuy} fullWidth>
+              COMPRE AGORA
+            </Button>
+            <Button href={props.linkManual} transparent fullWidth>
+              Manual instalação
+            </Button>
+          </ContainerButton>
+        </div>
+      </ContentAndSlide>
 
-        <ContainerButton>
-          <Button href="/" fullWidth>
-            COMPRE AGORA
-          </Button>
-          <Button href="/" transparent fullWidth>
-            Manual instalação
-          </Button>
-        </ContainerButton>
-      </div>
+      <ContentSpecific>
+        <Title small>Especificações</Title>
+        <p>{props.specification}</p>
+      </ContentSpecific>
     </Container>
   );
 }

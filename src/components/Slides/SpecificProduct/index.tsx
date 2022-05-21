@@ -7,15 +7,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+interface SpecificProductProps {
+  images: [string];
+}
+
 import { Container } from "./styles";
 
-const images = [
-  "/components/CardProduto/Image.png",
-  "/components/CardProduto/Image.png",
-  "/components/CardProduto/Image.png",
-];
-
-export function SpecificProduct() {
+export function SpecificProduct({ images }: SpecificProductProps) {
   return (
     <Container>
       <Swiper
@@ -24,9 +22,9 @@ export function SpecificProduct() {
         pagination={{ clickable: true }}
         centeredSlides={true}
       >
-        {images.map((image, key) => (
-          <SwiperSlide key={key}>
-            <img src={image} alt="Imagem demonstração" />
+        {images.map((image, alt) => (
+          <SwiperSlide key={alt}>
+            <img src={image} alt="Intercomunicador" />
           </SwiperSlide>
         ))}
       </Swiper>

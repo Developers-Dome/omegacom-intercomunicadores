@@ -11,6 +11,17 @@ export const Container = styled.section`
 
   display: flex;
   flex-direction: column;
+  gap: 40px;
+
+  @media (min-width: 1024px) {
+    max-width: 1440px;
+    gap: 80px;
+  }
+`;
+
+export const ContentAndSlide = styled.section`
+  display: flex;
+  flex-direction: column;
   align-items: center;
 
   > div {
@@ -48,8 +59,6 @@ export const Container = styled.section`
   }
 
   @media (min-width: 1023px) {
-    max-width: 1440px;
-
     flex-direction: row;
     align-items: flex-start;
     gap: 60px;
@@ -79,3 +88,5 @@ export const ContainerButton = styled.div`
     flex-direction: row;
   }
 `;
+
+export const ContentSpecific = styled.div``;
