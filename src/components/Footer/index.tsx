@@ -119,7 +119,7 @@ export default function Footer() {
             >
               <a target="_blank">
                 <img
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: "pointer", width: "100%" }}
                   src="/components/Footer/mercado-livre.png"
                 />
               </a>

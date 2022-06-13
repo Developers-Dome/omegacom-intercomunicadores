@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import c from "@styles/colors.json";
 import f from "@styles/typograph.json";
 
@@ -46,7 +45,7 @@ export const Carousel = styled.div`
   display: block;
 
   .swiper {
-    padding: 0 60px 0;
+    padding: 0  0 60px 0;
   }
 
   .swiper-slide {
