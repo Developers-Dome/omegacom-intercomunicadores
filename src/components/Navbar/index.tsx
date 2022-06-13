@@ -33,8 +33,8 @@ interface NavbarProps {
 }
 
 const prop: NavbarProps = {
-  logo: "./components/Navbar/navbar_logo.png",
-  logo_mobile: "./components/Navbar/navbar_logo.png",
+  logo: "/components/Navbar/navbar_logo.png",
+  logo_mobile: "/components/Navbar/navbar_logo.png",
   links: {
     link1: {
       text: "Início",

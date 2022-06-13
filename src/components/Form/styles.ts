@@ -5,19 +5,9 @@ import f from "@styles/typograph.json";
 
 export const Container = styled.main`
   position: relative;
+
   @media (min-width: 1024px) {
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-
-      width: 100%;
-      height: 450px;
-
-      background: ${c.primary300};
-      z-index: -1;
-    }
+    background: ${c.primary300};
   }
 `;
 
@@ -29,7 +19,7 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 40px;
 
   z-index: 1;
@@ -65,12 +55,12 @@ export const FormContainer = styled.form`
   gap: 20px;
 
   border: none;
+  background: ${c.white};
 
   @media (min-width: 1024px) {
     padding: 20px;
 
     border: 2px solid ${c.primary300};
-    background: ${c.white};
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
   }

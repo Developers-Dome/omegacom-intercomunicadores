@@ -1,23 +1,83 @@
 import styled from "styled-components";
+import c from "@styles/colors.json";
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding: 60px 5%;
-  margin: auto;
+  padding: 60px 5% 0;
+  margin: 0 auto 60px;
 
   @media (min-width: 1024px) {
-    padding: 100px 5%;
+    padding: 100px 5% 0;
   }
 `;
 
 export const GridCards = styled.div`
-  margin: 60px auto 60px auto;
+  display: none;
 
-  display: flex;
-  justify-content: space-between;
-  grid-column-gap: 22px;
-  grid-row-gap: 22px;
-  flex-wrap: wrap;
+  @media (min-width: 1024px) {
+    margin: 60px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    grid-column-gap: 22px;
+    grid-row-gap: 22px;
+    flex-wrap: wrap;
+  }
+`;
+
+export const Carousel = styled.div`
+  display: block;
+
+  .swiper {
+    padding: 60px 0;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: ${c.primary500};
+
+    top: auto;
+    bottom: 0;
+  }
+
+  .swiper-button-prev::after {
+    padding: 10px;
+    font-size: 0;
+    content: url("/components/Slides/arrow-left.svg");
+  }
+
+  .swiper-button-next::after {
+    padding: 10px;
+    font-size: 0;
+    content: url("/components/Slides/arrow-right.svg");
+  }
+
+  .swiper-pagination {
+    bottom: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+
+    margin: 0 6px !important;
+
+    background: white;
+    border: 1px solid ${c.primary500};
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: ${c.primary500};
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const Card = styled.div`
@@ -33,33 +93,4 @@ export const Card = styled.div`
 
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-`;
-
-export const Embla = styled.div`
-  width: calc(100% + 15px);
-
-  margin-top: 40px;
-  padding-left: 10px;
-  padding-top: 20px;
-
-  position: relative;
-
-  overflow: hidden;
-
-  @media (min-width: 769px) {
-    margin-top: 60px;
-  }
-`;
-
-export const EmblaContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  column-gap: 20px;
-`;
-
-export const EmblaSlide = styled.div`
-  position: relative;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 10px;
 `;

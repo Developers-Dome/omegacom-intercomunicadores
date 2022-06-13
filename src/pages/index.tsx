@@ -11,6 +11,7 @@ import { Hero } from "../components/Hero";
 import { Differentials } from "@components/Differentials";
 import { MainModels } from "@components/MainModels";
 import { Depositions } from "@components/Depositions";
+import { Title } from "@components/Title";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
       <Differentials />
+      <Title>Principais modelos</Title>
       <MainModels />
       <Depositions />
     </>

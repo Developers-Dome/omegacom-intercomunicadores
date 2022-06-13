@@ -1,22 +1,20 @@
 //Libs
-import useEmblaCarousel from "embla-carousel-react";
 import React from "react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 //Components
 import { CardDifferentials } from "@components/Differentials/CardDifferentials";
 import { Title } from "@components/Title";
 
 //Styles
-import {
-  Container,
-  Description,
-  GridCards,
-  Embla,
-  EmblaContainer,
-  EmblaSlide,
-} from "./styles";
+import { Container, Description, GridCards, Carousel } from "./styles";
 
-const prop = [
+const props = [
   {
     icon: "/components/CardDifferentials/Icon.png",
     title: "Lorem ipsum",
@@ -36,47 +34,39 @@ const prop = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nulla magnam quis voluptate repellat nesciunt ea, dol.",
   },
-  {
-    icon: "/components/CardDifferentials/Icon.png",
-    title: "Lorem ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nulla magnam quis voluptate repellat nesciunt ea, dol.",
-  },
 ];
 
 export function Differentials() {
-  const [emblaRef] = useEmblaCarousel({
-    loop: false,
-    align: "start",
-    skipSnaps: true,
-  });
-
   return (
     <Container>
       <Title>Diferenciais</Title>
 
       <Description>
         Atuando no mercado a mais de 10 anos, conquistamos espaço e respeito no
-        ramo de lotéricas e condôminios de todo o Brasil. Produto exclusivo e resistente é perfeito para a comunicação.
+        ramo de lotéricas e condôminios de todo o Brasil. Produto exclusivo e
+        resistente é perfeito para a comunicação.
       </Description>
 
-      {/* CARROSSEL DESKTOP */}
       <GridCards>
-        {Object.values(prop).map((card) => {
+        {Object.values(props).map((card) => {
           return <CardDifferentials props={card} key={card.title} />;
         })}
       </GridCards>
 
-      {/* CARROSSEL MOBILE */}
-      <Embla ref={emblaRef}>
-        <EmblaContainer>
-          {Object.values(prop).map((card, index) => (
-            <EmblaSlide key={index}>
+      <Carousel>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          centeredSlides={true}
+        >
+          {props.map((card, alt) => (
+            <SwiperSlide key={alt}>
               <CardDifferentials props={card} />
-            </EmblaSlide>
+            </SwiperSlide>
           ))}
-        </EmblaContainer>
-      </Embla>
+        </Swiper>
+      </Carousel>
     </Container>
   );
 }

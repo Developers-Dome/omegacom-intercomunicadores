@@ -3,13 +3,17 @@ import styled from "styled-components";
 import c from "@styles/colors.json";
 import f from "@styles/typograph.json";
 
-export const Container = styled.h1`
+interface TitleProps {
+  small?: boolean
+}
+
+export const Container = styled.h1<TitleProps>`
   width: fit-content;
 
   margin: 0 auto;
 
   font-family: Montserrat, sans-serif;
-  font-size: ${f.h3.fontSize};
+  font-size: ${props => props.small ? f.paragraphSmall.fontSize : f.paragraphLarge.fontSize};
   line-height: ${f.h3.lineHeight};
   color: ${c.neutral500};
   text-align: center;
@@ -24,7 +28,7 @@ export const Container = styled.h1`
       position: absolute;
 
       height: 2px;
-      width: 50px;
+      width: ${props => props.small ? "30px" : "50px"};
 
       background: ${c.primary300};
     }
@@ -41,7 +45,7 @@ export const Container = styled.h1`
   }
 
   @media (min-width: 1023px) {
-    font-size: ${f.displaySmall.fontSize};
+    font-size: ${props => props.small ? f.h4.fontSize : f.displaySmall.fontSize};
     line-height: ${f.displaySmall.lineHeight};
 
     &::after,

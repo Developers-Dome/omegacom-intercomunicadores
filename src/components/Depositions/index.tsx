@@ -1,12 +1,18 @@
 //Libs
 import React from "react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import useEmblaCarousel from "embla-carousel-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 //Components
 import { CardDepositions } from "./CardDepositions";
 
 //Styles
-import { Container, Embla, EmblaContainer, EmblaSlide } from "./styles";
+import { Container, GridCards, Carousel } from "./styles";
 import { Title } from "@components/Title";
 
 const props = [
@@ -24,31 +30,37 @@ const props = [
   },
   {
     name: "Gilbere de Oliveira",
-    content: "Produto bom e funcional. Agilizou consideravelmente a velocidade do atendimento, aumentando a produtividade. Proprietário muito flexível nas negociações.",
+    content:
+      "Produto bom e funcional. Agilizou consideravelmente a velocidade do atendimento, aumentando a produtividade. Proprietário muito flexível nas negociações.",
     stars: "/components/Depoimentos/stars.png",
   },
 ];
 
 export function Depositions() {
-  const [emblaRef] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    skipSnaps: true,
-  });
-
   return (
     <Container>
       <Title>Depoimentos</Title>
 
-      <Embla ref={emblaRef}>
-        <EmblaContainer>
+      <GridCards>
+        {props.map((card) => (
+          <CardDepositions key={card.name} props={card} />
+        ))}
+      </GridCards>
+
+      <Carousel>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          centeredSlides={true}
+        >
           {props.map((card) => (
-            <EmblaSlide key={card.name}>
+            <SwiperSlide key={card.name}>
               <CardDepositions props={card} />
-            </EmblaSlide>
+            </SwiperSlide>
           ))}
-        </EmblaContainer>
-      </Embla>
+        </Swiper>
+      </Carousel>
     </Container>
   );
 }
