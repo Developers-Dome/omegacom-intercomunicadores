@@ -3,7 +3,7 @@ import styled from "styled-components";
 import c from "@styles/colors.json";
 import f from "@styles/typograph.json";
 
-export const Container = styled.main`
+const Container = styled.main`
   padding: 110px 0 60px 0;
 
   display: flex;
@@ -32,3 +32,5 @@ export const Container = styled.main`
     }
   }
 `;
+
+export default Container;
