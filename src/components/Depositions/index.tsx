@@ -37,12 +37,6 @@ const props = [
 ];
 
 export function Depositions() {
-  const [emblaRef] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    skipSnaps: true,
-  });
-
   return (
     <Container>
       <Title>Depoimentos</Title>

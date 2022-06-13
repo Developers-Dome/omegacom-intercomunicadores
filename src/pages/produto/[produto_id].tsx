@@ -1,5 +1,5 @@
-import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 import { Title } from "@components/Title";
 import { PresentationProduct } from "@components/PresentationProduct";
@@ -33,8 +33,6 @@ export default function Produto({ slug }: ProdutoProps) {
   };
 
   const displayContent = staticContent[slug];
-
-  console.log(displayContent);
 
   return (
     <>

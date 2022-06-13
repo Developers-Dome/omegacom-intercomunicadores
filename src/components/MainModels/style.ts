@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import c from "@styles/colors.json";
-import f from "@styles/typograph.json";
 
 export const Container = styled.div`
   max-width: 1440px;
