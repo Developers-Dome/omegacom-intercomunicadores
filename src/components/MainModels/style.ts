@@ -1,26 +1,29 @@
 import styled from "styled-components";
 
+import c from "@styles/colors.json";
+import f from "@styles/typograph.json";
+
 export const Container = styled.div`
   max-width: 1440px;
-  padding: 0 5%;
-  margin: auto;
+  padding: 60px 5% 0;
+  margin: 0 auto 60px;
 
   @media (min-width: 1024px) {
-    padding: 0 5%;
+    padding: 100px 5% 0;
   }
 `;
 
 export const GridCards = styled.div`
-  margin: 0 auto;
+  display: none;
 
-  display: flex;
-  justify-content: space-between;
-  grid-column-gap: 22px;
-  grid-row-gap: 22px;
-  flex-wrap: wrap;
+  @media (min-width: 1024px) {
+    margin: 60px auto 0;
 
-  @media (max-width: 1024px) {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    grid-column-gap: 22px;
+    grid-row-gap: 22px;
+    flex-wrap: wrap;
   }
 `;
 
@@ -39,31 +42,59 @@ export const Card = styled.div`
   border-radius: 4px;
 `;
 
-export const Embla = styled.div`
-  width: calc(100% + 15px);
+export const Carousel = styled.div`
+  display: block;
 
-  margin-bottom: 35px;
-  margin-top: 20px;
-  padding-left: 10px;
+  .swiper {
+    padding: 0 60px 0;
+  }
 
-  position: relative;
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
 
-  overflow: hidden;
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: ${c.primary500};
+
+    top: auto;
+    bottom: 0;
+  }
+
+  .swiper-button-prev::after {
+    padding: 10px;
+    font-size: 0;
+    content: url("/components/Slides/arrow-left.svg");
+  }
+
+  .swiper-button-next::after {
+    padding: 10px;
+    font-size: 0;
+    content: url("/components/Slides/arrow-right.svg");
+  }
+
+  .swiper-pagination {
+    bottom: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+
+    margin: 0 6px !important;
+
+    background: white;
+    border: 1px solid ${c.primary500};
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: ${c.primary500};
+  }
 
   @media (min-width: 1024px) {
     display: none;
   }
-`;
-
-export const EmblaContainer = styled.div`
-  display: flex;
-  column-gap: 20px;
-`;
-export const EmblaSlide = styled.div`
-  position: relative;
-  flex: 1 1 100%;
-  margin-top: 5px;
-  margin-bottom: 5px;
 `;
 
 export const Button = styled.div`
@@ -77,4 +108,4 @@ export const Button = styled.div`
   @media (min-width: 1024px) {
     margin-top: 60px;
   }
-`
+`;

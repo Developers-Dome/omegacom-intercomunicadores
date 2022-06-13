@@ -1,21 +1,17 @@
 //Libs
-import useEmblaCarousel from "embla-carousel-react";
 import React from "react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 //Components
 import { CardProduct } from "@components/CardProduct";
-import { Title } from "@components/Title";
 
 //Styles
-import {
-  Container,
-  GridCards,
-  Embla,
-  EmblaContainer,
-  EmblaSlide,
-  Button
-} from "./style";
-import LinkItem from "@components/Button";
+import { Container, GridCards, Carousel } from "./style";
 
 const prop = [
   {
@@ -36,31 +32,28 @@ const prop = [
 ];
 
 export function MainModels() {
-  const [emblaRef] = useEmblaCarousel({
-    loop: false,
-    align: "start",
-    skipSnaps: true,
-  });
-
   return (
     <Container>
-      {/* CARROSSEL DESKTOP */}
       <GridCards>
         {Object.values(prop).map((card) => {
           return <CardProduct props={card} key={card.model} />;
         })}
       </GridCards>
 
-      {/* CARROSSEL MOBILE */}
-      <Embla ref={emblaRef}>
-        <EmblaContainer>
-          {Object.values(prop).map((card, index) => (
-            <EmblaSlide key={index}>
+      <Carousel>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          centeredSlides={true}
+        >
+          {Object.values(prop).map((card) => (
+            <SwiperSlide key={card.model}>
               <CardProduct props={card} />
-            </EmblaSlide>
+            </SwiperSlide>
           ))}
-        </EmblaContainer>
-      </Embla>
+        </Swiper>
+      </Carousel>
     </Container>
   );
 }
